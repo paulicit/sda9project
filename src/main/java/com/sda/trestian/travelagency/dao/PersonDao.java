@@ -27,8 +27,6 @@ public class PersonDao {
         return person;
     }
 
-    //Testing git
-
     public List<Person> getPersonsFromCity(String city){
         Session session = HiberateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

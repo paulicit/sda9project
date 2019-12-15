@@ -2,13 +2,11 @@ package com.sda.trestian.travelagency;
 
 import com.sda.trestian.travelagency.dao.PersonDao;
 import com.sda.trestian.travelagency.model.Person;
+import com.sda.trestian.travelagency.view.TravelAgencyMainView;
 
-public class Application {
+public class Application extends TravelAgencyMainView {
 
     public static void main(String[] args) {
-        System.out.println("Starting Application");
-        PersonDao personDao = new PersonDao();
-        Person person = personDao.getPerson(1);
-        System.out.println(person.getName());
+        TravelAgencyMainView.launch();
     }
 }

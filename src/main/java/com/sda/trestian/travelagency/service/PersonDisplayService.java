@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PersonDisplayService {
 
-    private PersonDao personDao;
+    private PersonDao personDao = new PersonDao();
     //private CarDao carDao;
 
     public Person getPerson(int idPerson){
@@ -18,6 +18,8 @@ public class PersonDisplayService {
 //    public List<Person> getAllPersons(){
 //        return personDao.getAllPersons();
 //    }
+
+
 
     //Get persons with filter in Java Code
 //    public List<Person> getPersonsFromCity(String city){

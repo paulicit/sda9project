@@ -1,5 +1,6 @@
 package com.sda.trestian.travelagency.util;
 
+import com.sda.trestian.travelagency.model.Person;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
@@ -25,7 +26,7 @@ public class HiberateUtil {
                 settings.put(Environment.SHOW_SQL, "true");
                 configuration.setProperties(settings);
 
-//                configuration.addAnnotatedClass(Attendance.class);
+                configuration.addAnnotatedClass(Person.class);
 
                 sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
