@@ -9,7 +9,6 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class PersonDao {
-
     public Person getPerson(int idPerson) {
         Session session = HiberateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -25,9 +24,10 @@ public class PersonDao {
 //        query.executeUpdate();
 //        transaction.commit();
         session.close();
-
         return person;
     }
+
+    //Testing git
 
     public List<Person> getPersonsFromCity(String city){
         Session session = HiberateUtil.getSessionFactory().openSession();
